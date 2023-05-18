@@ -130,6 +130,7 @@ section {
   color: var(--bg-color);
   z-index: 1;
   overflow: hidden;
+  cursor: pointer;
 }
 .home .btn-box .btn:hover {
   color: var(--main-color);
@@ -143,7 +144,7 @@ section {
   height: 100%;
   background-color: var(--bg-color);
   z-index: -1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .home .btn-box .btn:hover::before {
   width: 100%;
@@ -192,7 +193,7 @@ section {
   height: 100%;
   background-color: var(--bg-color);
   z-index: -1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .home .home-sci a:hover::before {
   width: 100%;
@@ -305,7 +306,7 @@ section {
   height: 100%;
   background-color: var(--bg-color);
   z-index: -1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .education .education-row .education-column .education-box .education-content .content {
   position: relative;
@@ -338,7 +339,7 @@ section {
   height: 100%;
   background-color: var(--bg-color);
   z-index: -1;
-  transition: 0.5s;
+  transition: 0.3s;
   background: var(--second-bg-color);
 }
 .education .education-row .education-column .education-box .education-content .content:hover::before {
@@ -390,7 +391,7 @@ section {
   height: 100%;
   background-color: var(--bg-color);
   z-index: -1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .skills .skills-content:hover::before {
   width: 100%;
@@ -436,6 +437,7 @@ section {
   max-width: 70rem;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 .contact form .input-box {
   position: relative;
@@ -461,6 +463,12 @@ section {
 .contact form .input-box .input-field input::placeholder {
   color: var(--text-color);
 }
+.contact form .input-box .input-field input:focus ~ .focus {
+  width: 100%;
+}
+.contact form .input-box .input-field input:valid ~ .focus {
+  width: 100%;
+}
 .contact form .textarea-field {
   position: relative;
   margin: 0.8rem 0 2.7rem;
@@ -481,6 +489,12 @@ section {
 .contact form .textarea-field textarea::placeholder {
   color: var(--text-color);
 }
+.contact form .textarea-field textarea:focus ~ .focus {
+  width: 100%;
+}
+.contact form .textarea-field textarea:valid ~ .focus {
+  width: 100%;
+}
 .contact form .btn {
   position: relative;
   display: inline-flex;
@@ -497,6 +511,8 @@ section {
   color: var(--bg-color);
   z-index: 1;
   overflow: hidden;
+  cursor: pointer;
+  height: 4rem;
 }
 .contact form .btn:hover {
   color: var(--main-color);
@@ -510,8 +526,61 @@ section {
   height: 100%;
   background-color: var(--bg-color);
   z-index: -1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .contact form .btn:hover::before {
   width: 100%;
+}
+.contact form .focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--second-bg-color);
+  border-radius: 0.6rem;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+}
+.footer .footer-text p {
+  font-size: 1.2rem;
+}
+.footer .footer-iconTop a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
+  overflow: hidden;
+  z-index: 1;
+}
+.footer .footer-iconTop a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bg-color);
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.2s;
+}
+.footer .footer-iconTop a:hover::before, .footer .footer-iconTop a:hover i {
+  width: 100%;
+  color: var(--main-color);
+}
+.footer .footer-iconTop a i {
+  font-size: 1.6rem;
 }
