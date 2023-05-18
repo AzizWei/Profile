@@ -79,6 +79,9 @@ section {
   font-weight: 700;
   line-height: 1.3;
 }
+.home .home-content h1 span {
+  color: var(--main-color);
+}
 .home .home-content p {
   width: 60%;
   font-size: 1.6rem;
