@@ -107,15 +107,14 @@ section {
   background: var(--bg-color);
   opacity: 0.8;
 }
-
-.btn-box {
+.home .btn-box {
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 34.5rem;
   height: 5rem;
 }
-.btn-box .btn {
+.home .btn-box .btn {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -132,10 +131,10 @@ section {
   z-index: 1;
   overflow: hidden;
 }
-.btn-box .btn:hover {
+.home .btn-box .btn:hover {
   color: var(--main-color);
 }
-.btn-box .btn::before {
+.home .btn-box .btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -146,28 +145,27 @@ section {
   z-index: -1;
   transition: 0.5s;
 }
-.btn-box .btn:hover::before {
+.home .btn-box .btn:hover::before {
   width: 100%;
 }
-.btn-box .btn:nth-child(2) {
+.home .btn-box .btn:nth-child(2) {
   background: transparent;
   color: var(--main-color);
 }
-.btn-box .btn:nth-child(2):hover {
+.home .btn-box .btn:nth-child(2):hover {
   color: var(--bg-color);
 }
-.btn-box .btn:nth-child(2)::before {
+.home .btn-box .btn:nth-child(2)::before {
   background: var(--main-color);
 }
-
-.home-sci {
+.home .home-sci {
   position: absolute;
   bottom: 4rem;
   width: 170px;
   display: flex;
   justify-content: space-between;
 }
-.home-sci a {
+.home .home-sci a {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -182,21 +180,21 @@ section {
   z-index: 1;
   overflow: hidden;
 }
-.home-sci a:hover {
+.home .home-sci a:hover {
   color: var(--bg-color);
 }
-.home-sci a::before {
+.home .home-sci a::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
-  background: var(--main-color);
+  background-color: var(--bg-color);
   z-index: -1;
   transition: 0.5s;
 }
-.home-sci a:hover::before {
+.home .home-sci a:hover::before {
   width: 100%;
 }
 
@@ -302,11 +300,12 @@ section {
   content: "";
   position: absolute;
   top: 0;
-  left: -1.1rem;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background: var(--main-color);
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--bg-color);
+  z-index: -1;
+  transition: 0.5s;
 }
 .education .education-row .education-column .education-box .education-content .content {
   position: relative;
@@ -337,10 +336,182 @@ section {
   left: 0;
   width: 0;
   height: 100%;
+  background-color: var(--bg-color);
+  z-index: -1;
+  transition: 0.5s;
   background: var(--second-bg-color);
+}
+.education .education-row .education-column .education-box .education-content .content:hover::before {
+  width: 100%;
+}
+
+.skills {
+  min-height: auto;
+  padding: 7rem;
+  background: var(--second-bg-color);
+}
+.skills .skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.skills .skills-row .skills-column {
+  flex: 1 1 40rem;
+}
+.skills .skills-row .skills-column .title {
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem;
+}
+.skills .heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.skills .heading span {
+  color: var(--main-color);
+}
+.skills .skills-box {
+  position: relative;
+}
+.skills .skills-content {
+  position: relative;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
+  padding: 0.5rem 1.5rem;
+  z-index: 1;
+  overflow: hidden;
+}
+.skills .skills-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--bg-color);
   z-index: -1;
   transition: 0.5s;
 }
-.education .education-row .education-column .education-box .education-content .content:hover::before {
+.skills .skills-content:hover::before {
+  width: 100%;
+}
+.skills .skills-content .progress {
+  padding: 1rem 0;
+}
+.skills .skills-content .progress h3 {
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+.skills .skills-content .progress h3 span {
+  color: var(--text-color);
+}
+.skills .skills-content .progress .bar {
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--main-color);
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.skills .skills-content .progress .bar span {
+  display: block;
+  height: 100%;
+  border-radius: 0.3rem;
+  background: var(--main-color);
+}
+
+.contact {
+  min-height: auto;
+  padding-bottom: 7rem;
+}
+.contact .heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.contact .heading span {
+  color: var(--main-color);
+}
+.contact form {
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact form .input-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box .input-field {
+  position: relative;
+  width: 49%;
+  margin: 0.8rem 0;
+}
+.contact form .input-box .input-field input {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: transparent;
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--main-color);
+}
+.contact form .input-box .input-field input::placeholder {
+  color: var(--text-color);
+}
+.contact form .textarea-field {
+  position: relative;
+  margin: 0.8rem 0 2.7rem;
+  width: 100%;
+  display: flex;
+}
+.contact form .textarea-field textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: transparent;
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--main-color);
+  resize: none;
+}
+.contact form .textarea-field textarea::placeholder {
+  color: var(--text-color);
+}
+.contact form .btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+}
+.contact form .btn:hover {
+  color: var(--main-color);
+}
+.contact form .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--bg-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+.contact form .btn:hover::before {
   width: 100%;
 }

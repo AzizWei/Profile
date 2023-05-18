@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/de998ff9a0.js" crossorigin="anonymous"></script>
 
     <header class="header">
-        <a href="#" class="logo">S.C.Wang</a>
+        <a href="#" class="logo">W47</a>
 
         <div class="bx bx-menu"id="menu-icon"></div>
 
@@ -23,7 +23,7 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#education">Education</a>
-            <a href="#skill">Skill</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -141,10 +141,104 @@
         <div class="skills-row">
             <div class="skills-column">
                 <h3 class="title">Coding Skills</h3>
+                <div class="skill-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>HTML <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>CSS <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>JavaScript <span>60%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>JavaScript <span>60%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-column">
+                <h3 class="title">Professional Skills</h3>
+                <div class="skill-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Web Design <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Web Development <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Graphic Design <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Graphic Design <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <script>
+            // 控制進度條  只需調整html裡的span數值 下方bar會跟著變化
+            var progressSections = document.querySelectorAll(".progress");  //選取所有具有.progress類別的元素
+            
+            progressSections.forEach(function(section) {    //forEach遍歷每個進度段落
+                var progressValue = section.querySelector("h3 span").innerHTML;  //抓到 h3底下span裡的值
+                var progress = parseInt(progressValue.replace("%", ""));   //parseInt將字串轉換為以十進位表示的整數 並且把值"%"替代為空白
+                var progressBar = section.querySelector(".bar span");   
+                progressBar.style.width = progress + "%";
+            });
+        </script>
+    </section>
+
+
+    <!-- contact section -->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Address" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Mobile Number" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="" id="" placeholder="Your Message" required></textarea>
+                <span class="focus"></span>
+            </div>
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
     </section>
 
     <script src="js/script.js"></script>
+
 </body>
 </html>
