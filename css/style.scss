@@ -593,7 +593,6 @@ section{
 .portfolio{
     min-height: auto;
     padding-bottom: 7rem;
-    border: 1px solid red;
 
     .heading{
         @include heading();
@@ -609,7 +608,7 @@ section{
         gap: 1rem; 
         height: auto; 
         position: relative;
-        border: 1px solid red;
+        justify-content: center;
         .btnGroup{
 
             .btn{

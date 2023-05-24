@@ -147,7 +147,7 @@
                 <div class="skill-box">
                     <div class="skills-content">
                         <div class="progress">
-                            <h3>HTML <span>90%</span></h3>
+                            <h3>HTML <span>75%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
                         <div class="progress">
@@ -244,18 +244,14 @@
     <!-- portfolio section -->
     <section class="portfolio" id="portfolio">
         <h2 class="heading"><span>Portfolio</span></h2>
-        <h3 class="title">Web Design</h3>
+        <!-- <h3 class="title">Web Design</h3>
         <div class="card-box">
             <div class="card">
 
             </div>
-        </div>
+        </div> -->
         <h3 class="title">Photoshop</h3>
         <div class="card-box" id="slide">
-           <div class="btnGroup">
-                <div id="preBtn" class="btn"><i class='bx bx-left-arrow'></i></div>
-                <div id="nextBtn" class=" btn"><i class='bx bx-right-arrow'></i></div>
-           </div>
             <div class="card">
                 <img src="https://picsum.photos/300/300/?random=1">
                 <h6 class="card-name"><span>#1</span> name</h6>
@@ -276,18 +272,13 @@
                 <h6><span>#4</span> name</h6>
                 <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam animi ab, deserunt voluptatum distinctio labore.</p>
             </div>
+            <div class="btnGroup">
+                <div id="preBtn" class="btn"><i class='bx bx-left-arrow'></i></div>
+                <div id="nextBtn" class=" btn"><i class='bx bx-right-arrow'></i></div>
+           </div>
         </div>
     </section>
-    <script>
-        document.getElementById('preBtn').onclick = function(){
-            let lists = document.querySelectorAll('.card');
-            document.getElementById('slide').appendChild(lists[0]);
-        }
-        document.getElementById('nextBtn').onclick = function(){
-            let lists = document.querySelectorAll('.card');
-            document.getElementById('slide').prepend(lists[lists.length - 1]);
-        }
-    </script>
+
 
 <!-- footer -->
 

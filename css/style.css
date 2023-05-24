@@ -591,7 +591,6 @@ section {
 .portfolio {
   min-height: auto;
   padding-bottom: 7rem;
-  border: 1px solid red;
 }
 .portfolio .heading {
   font-size: 5rem;
@@ -611,7 +610,7 @@ section {
   gap: 1rem;
   height: auto;
   position: relative;
-  border: 1px solid red;
+  justify-content: center;
 }
 .portfolio .card-box .btnGroup .btn {
   display: block;
@@ -739,4 +738,4 @@ section {
     left: 0;
     transition-delay: 0s;
   }
-}
+}/*# sourceMappingURL=style.css.map */
