@@ -13,6 +13,8 @@
 <body>    
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/de998ff9a0.js" crossorigin="anonymous"></script>
+    <!-- jQuery檔案 -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <header class="header">
         <a href="#" class="logo">47</a>
@@ -25,6 +27,7 @@
             <a href="#education">Education</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
+            <a href="#portfolio">Portfolio</a>
         </nav>
 
     </header>
@@ -191,7 +194,7 @@
             // 控制進度條  只需調整html裡的span數值 下方bar會跟著變化
             var progressSections = document.querySelectorAll(".progress");  //選取所有具有.progress類別的元素
             
-            progressSections.forEach(function(section) {    //forEach遍歷每個進度段落
+            progressSections.forEach((section)=>{    //forEach遍歷每個進度段落
                 var progressValue = section.querySelector("h3 span").innerHTML;  //抓到 h3底下span裡的值
                 var progress = parseInt(progressValue.replace("%", ""));   //parseInt將字串轉換為以十進位表示的整數 並且把值"%"替代為空白
                 var progressBar = section.querySelector(".bar span");   
@@ -237,6 +240,55 @@
             </div>
         </form>
     </section>
+
+    <!-- portfolio section -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading"><span>Portfolio</span></h2>
+        <h3 class="title">Web Design</h3>
+        <div class="card-box">
+            <div class="card">
+
+            </div>
+        </div>
+        <h3 class="title">Photoshop</h3>
+        <div class="card-box" id="slide">
+           <div class="btnGroup">
+                <div id="preBtn" class="btn"><i class='bx bx-left-arrow'></i></div>
+                <div id="nextBtn" class=" btn"><i class='bx bx-right-arrow'></i></div>
+           </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/300/?random=1">
+                <h6 class="card-name"><span>#1</span> name</h6>
+                <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam animi ab, deserunt voluptatum distinctio labore.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/300/?random=2">
+                <h6><span>#2</span> name</h6>
+                <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam animi ab, deserunt voluptatum distinctio labore.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/300/?random=3">
+                <h6><span>#3</span> name</h6>
+                <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam animi ab, deserunt voluptatum distinctio labore.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/300/?random=4">
+                <h6><span>#4</span> name</h6>
+                <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam animi ab, deserunt voluptatum distinctio labore.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('preBtn').onclick = function(){
+            let lists = document.querySelectorAll('.card');
+            document.getElementById('slide').appendChild(lists[0]);
+        }
+        document.getElementById('nextBtn').onclick = function(){
+            let lists = document.querySelectorAll('.card');
+            document.getElementById('slide').prepend(lists[lists.length - 1]);
+        }
+    </script>
+
 <!-- footer -->
 
     <footer class="footer" id="footer">

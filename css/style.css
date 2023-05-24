@@ -588,6 +588,69 @@ section {
   transition: 0.3s;
 }
 
+.portfolio {
+  min-height: auto;
+  padding-bottom: 7rem;
+  border: 1px solid red;
+}
+.portfolio .heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.portfolio .heading span {
+  color: var(--main-color);
+}
+.portfolio .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.portfolio .card-box {
+  display: inline-flex;
+  width: 100%;
+  gap: 1rem;
+  height: auto;
+  position: relative;
+  border: 1px solid red;
+}
+.portfolio .card-box .btnGroup .btn {
+  display: block;
+  font-size: 4rem;
+  color: var(--main-color);
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+.portfolio .card-box .btnGroup #preBtn {
+  left: 0;
+  transform: translateX(-5rem);
+}
+.portfolio .card-box .btnGroup #nextBtn {
+  right: 0;
+  transform: translateX(5rem);
+}
+.portfolio .card-box .card {
+  padding: 2% 2% 3%;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  border: 0.2rem solid var(--main-color);
+  text-align: center;
+  position: relative;
+}
+.portfolio .card-box .card img {
+  background: cover center center !important;
+  border-radius: 1rem;
+}
+.portfolio .card-box .card h6 {
+  font-size: 1rem;
+}
+.portfolio .card-box .card h6 span {
+  color: var(--main-color);
+}
+.portfolio .card-box .card .info {
+  display: none;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -676,4 +739,4 @@ section {
     left: 0;
     transition-delay: 0s;
   }
-}/*# sourceMappingURL=style.css.map */
+}
