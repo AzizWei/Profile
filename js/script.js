@@ -51,8 +51,8 @@ document.getElementById('nextBtn').onclick = () => {
     let firstCard = slide.querySelector('.card');
     slide.appendChild(firstCard.cloneNode(true));
     slide.removeChild(firstCard);
-  }
-  
+}
+
   
 document.getElementById('preBtn').onclick =()=>{
     let lists = document.querySelectorAll('.card');
