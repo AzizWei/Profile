@@ -41,16 +41,11 @@ window.onscroll = () => {
 
 //Slide Control
 
-// document.getElementById('nextBtn').onclick=()=>{
-//     let lists = document.querySelectorAll('.card');
-//     document.getElementById('slide').appendChild(lists[0]);
-// }
 
-document.getElementById('nextBtn').onclick = () => {
-    let slide = document.getElementById('slide');
-    let firstCard = slide.querySelector('.card');
-    slide.appendChild(firstCard.cloneNode(true));
-    slide.removeChild(firstCard);
+document.getElementById('nextBtn').onclick=()=>{
+    let lists = document.querySelectorAll('.card');
+    document.getElementById('slide').appendChild(lists[0].cloneNode(true));
+    document.getElementById('slide').removeChild(lists[0]);
 }
 
   
@@ -59,11 +54,3 @@ document.getElementById('preBtn').onclick =()=>{
     document.getElementById('slide').prepend(lists[lists.length - 1]);
 }
 
-
-// document.getElementById('preBtn').onclick = () => {
-//     let slide = document.getElementById('slide');
-//     let lastCard = slide.querySelector('.card:last-child');
-//     slide.insertBefore(lastCard.cloneNode(true), slide.firstChild);
-//     slide.removeChild(lastCard);
-//   }
-  
